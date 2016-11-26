@@ -1,0 +1,15 @@
+﻿@model List<PartialViews.App_Start.Department>
+
+@if (Model != null && Model.Count > 0)
+{
+    foreach (var department in Model)
+    {
+        @Html.Partial("_Department", department);
+    }
+}
+
+<style>
+    .node {
+        padding-left:10px;
+    }  
+</style>

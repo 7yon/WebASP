@@ -1,0 +1,9 @@
+﻿@model List<PartialViews.App_Start.Employee>
+
+<div class="node">
+    @foreach (PartialViews.App_Start.Employee employee in @Model)
+    {
+        <div>@employee.Surname @employee.Name @employee.Patronymic: @employee.Age лет, Т.: @employee.Phone</div>
+    }
+</div>
+

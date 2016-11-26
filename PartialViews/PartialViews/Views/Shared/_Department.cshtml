@@ -1,0 +1,23 @@
+﻿@model PartialViews.App_Start.Department
+
+<div class="node">
+
+    <div>
+        <strong>@Model.Name</strong>
+        Кол-во сорудников: @Model.NumberEmplyees
+        Адрес: @Model.Address
+        Т.: @Model.Phone
+    </div>
+
+     @if (@Model.SubDepartments.Count > 0)
+     {
+         foreach (var department in @Model.SubDepartments)
+         {
+            @Html.Partial("_Department", department);
+         }
+     }
+     @if (@Model.Employees.Count > 0)
+     {
+        @Html.Partial("_Employees", @Model.Employees);
+     }
+</div>
